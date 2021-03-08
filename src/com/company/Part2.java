@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class Part2 {
     /** To jest nasza metoda */
     public static void main(String[] args) {
@@ -34,5 +36,40 @@ public class Part2 {
         /// Zadanie 8
         float variable, Variable;
         /// Zadanie 9 - to jest komentarz
+        System.out.println();
+        /// Zadanie 10
+        System.out.println(Long.MIN_VALUE);
+        System.out.println(Long.MAX_VALUE);
+        /// Zadanie 11
+        System.out.print("____________________ \n" +
+                "\\______   \\______   \\\n" +
+                " |     ___/|     ___/\n" +
+                " |    |    |    |    \n" +
+                " |____|    |____|    \n" +
+                "                     \n");
+        /// Zadanie 12
+        float floatVar = 100000001;
+        System.out.println(floatVar);
+        /// Zadanie 13
+        float var;
+        // System.out.println(var); - NIE DA SIĘ
+        /// Zadanie 14
+        int liczba = 13;
+        System.out.printf("%s%d", "Wpisałeś liczbę ", liczba);
+        /// Zadanie 15
+        System.out.println();
+        System.out.println("Podaj liczbę typu całkowitego");
+        int intVariable;
+        Scanner scanner = new Scanner(System.in);
+        intVariable = scanner.nextInt();
+        System.out.println("Wpisałeś liczbę " + intVariable);
+        /// Zadanie 16
+        double doubleVar;
+        doubleVar = scanner.nextDouble();
+        System.out.println("Wpisałeś liczbę " + doubleVar);
+        /// Zadanie 17
+        Boolean booleanVar;
+        booleanVar = scanner.nextBoolean();
+        System.out.println("Wpisałeś wartość " + booleanVar);
     }
 }
