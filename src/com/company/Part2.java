@@ -68,7 +68,7 @@ public class Part2 {
         doubleVar = scanner.nextDouble();
         System.out.println("Wpisałeś liczbę " + doubleVar);
         /// Zadanie 17
-        Boolean booleanVar;
+        boolean booleanVar;
         booleanVar = scanner.nextBoolean();
         System.out.println("Wpisałeś wartość " + booleanVar);
     }
