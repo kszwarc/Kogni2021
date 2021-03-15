@@ -31,15 +31,12 @@ public class Part3 {
         /// Zadanie 8
         final double EUR_RATE = 0.22;
         final double USD_RATE = 0.26;
-
         System.out.println("Wprowadź kwotę w PLN");
         double pln = scanner.nextDouble();
-
         System.out.println("Podałeś kwotę w PLN " + pln);
         System.out.println("Jej wartość w EUR to " + pln * EUR_RATE);
         System.out.println("Jej wartość w USD to " + pln * USD_RATE);
         /// Wartości pieniężnych nie powinniśmy zapisywać za pomocą typów zmiennoprzecinkowych
-
         /// Zadanie 9
         System.out.println("Podaj moc N");
         double N = scanner.nextDouble();
@@ -82,7 +79,7 @@ public class Part3 {
             System.out.println("Wpisana liczba jest mniejsza od 50");
         }
         else {
-            System.out.println("Wpisana liczba jest wieksza badz równa 50");
+            System.out.println("Wpisana liczba jest większa bądź równa 50");
         }
     }
 }
