@@ -81,5 +81,50 @@ public class Part3 {
         else {
             System.out.println("Wpisana liczba jest większa bądź równa 50");
         }
+        /// Zadanie 16
+        int varEx16No1 = scanner.nextInt();
+        int varEx16No2 = scanner.nextInt();
+        int varEx16No3 = scanner.nextInt();
+        if (varEx16No1 >= varEx16No2 && varEx16No1 >= varEx16No3) {
+            System.out.println("Pierwsza liczba jest największa");
+        }
+        else if (varEx16No2 >= varEx16No1 && varEx16No2 >= varEx16No3) {
+            System.out.println("Druga liczba jest największa");
+        }
+        else if (varEx16No3 >= varEx16No2 && varEx16No3 >= varEx16No1) {
+            System.out.println("Trzecia liczba jest największa");
+        }
+        /// Zadanie 17
+        int varEx17 = scanner.nextInt();
+        if (varEx17 < 0) {
+            varEx17 *= -1;
+        }
+        System.out.println(varEx17);
+        /// Zadanie 18
+        int varEx18 = scanner.nextInt();
+        switch (varEx18) {
+            case 1:
+                System.out.println("Zmienna ma wartość 1");
+                break; /// musimy dawać break po case, bo inaczej program wypisze resztę bez sprawdzenia
+            default:
+                System.out.println("Zmienna ma inną wartość");
+        }
+        /// Zadanie 19
+        char sign = scanner.next().charAt(0);
+        switch (sign) {
+
+            case 'W':
+                System.out.println("tekst");
+                break;
+        }
+        /// Zadanie 20
+        int varEx20 = scanner.nextInt();
+        int result = varEx20 < 50 ? 0 : 100;
+        System.out.println(result);
+        /// Zadanie 21
+        double varEx21;
+        if (scanner.hasNextDouble()) {
+            varEx21 = scanner.nextDouble();
+        }
     }
 }
