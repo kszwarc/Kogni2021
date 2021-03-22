@@ -112,7 +112,6 @@ public class Part3 {
         /// Zadanie 19
         char sign = scanner.next().charAt(0);
         switch (sign) {
-
             case 'W':
                 System.out.println("tekst");
                 break;
