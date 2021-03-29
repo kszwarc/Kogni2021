@@ -111,8 +111,8 @@ public class Part4 {
         /// rysujemy dół
         final int BOTTOM_HEIGHT = height / 2 == 0 ? 1 : height / 2; /// założyłem, że ładnie będzie wyglądała choinka jeżeli dół będzie miał połowę wysokości. Jeżeli połowa to 0 (np. dla wysokości 1), to wpisujemy 1, żeby jakiś dół był
         final char BOTTOM_SYMBOL = '|';
-        for (int i=0; i<BOTTOM_HEIGHT; i++) {
-            for (int j=0; j<height; j++) {
+        for (int i = 0; i < BOTTOM_HEIGHT; i++) {
+            for (int j = 0; j < height; j++) {
                 System.out.print(" ");
             }
             System.out.println(BOTTOM_SYMBOL);
