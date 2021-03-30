@@ -55,7 +55,7 @@ public class Part4 {
         System.out.println(factorial);
         /// Zadanie 4
         for (int i = 1; i <= 100; i++) {
-            if (i % 4 == 0 && i % 16 !=0) {
+            if (i % 4 == 0 && i % 16 != 0) {
                 continue;
             }
             System.out.println(i);
