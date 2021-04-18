@@ -96,11 +96,11 @@ public class Part4 {
         int numberOfSpaces = height;
         int numberOfSymbols = 1;
         for (int i = 0; i < height; i++) {
-            //// W jednym obiegu pętli wypiszemy jedną linię choinki. Najpierw spacje przesuwające *
+            /// W jednym obiegu pętli wypiszemy jedną linię choinki. Najpierw spacje przesuwające *
             for (int j = 0; j < numberOfSpaces; j++) {
                 System.out.print(" ");
             }
-            //// A teraz *
+            /// A teraz *
             for (int j = 0; j < numberOfSymbols; j++) {
                 System.out.print(TREE_SYMBOL);
             }
