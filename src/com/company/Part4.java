@@ -15,7 +15,7 @@ public class Part4 {
             sum += scanner.nextInt();
         }
         double avg =  sum / n;
-        System.out.println("Srednia " + avg);
+        System.out.println("Średnia " + avg);
         /// Zadanie 2
         final int MIN_VALUE = 1;
         final int MAX_VALUE = 100;
