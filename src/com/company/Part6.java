@@ -8,11 +8,11 @@ public class Part6 {
         /// Zadanie 1
         Scanner scanner = new Scanner(System.in);
         System.out.println("Podaj wartość w złotówkach");
-        double PLN = scanner.nextDouble();
-        BigDecimal PLN_BD = new BigDecimal(PLN);
-        BigDecimal RATE = new BigDecimal("0.22");
-        BigDecimal EUR = RATE.multiply(PLN_BD);
-        System.out.println("Wynik: " + EUR);
+        double pln = scanner.nextDouble();
+        BigDecimal plnInBigDecimal = new BigDecimal(pln);
+        final BigDecimal RATE = new BigDecimal("0.22");
+        BigDecimal eur = RATE.multiply(plnInBigDecimal);
+        System.out.println("Wynik: " + eur);
         /// Zadanie 2
     }
 }
