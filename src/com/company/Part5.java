@@ -57,5 +57,31 @@ public class Part5 {
         double n = scanner.nextDouble();
         double S = Q / (n * Math.cos(alphaInRadians));
         System.out.println("S wynosi: " + S);
+        /// Zadanie 9
+        System.out.println("Wprowadź liczbę");
+        double var = scanner.nextDouble();
+        System.out.println("Jej wartość bezwzględna to: " + Math.abs(var));
+        /// Zadanie 10
+        System.out.println("Wprowadź podstawę");
+        double base = scanner.nextDouble();
+        System.out.println("Wprowadź wykładnik");
+        double exponent = scanner.nextDouble();
+        System.out.println("Potęga to: " + Math.pow(base, exponent));
+        /// Zadanie 11
+        System.out.println("Wprowadź liczbę");
+        double num = scanner.nextDouble();
+        System.out.println("Zaokrąglona w dół " + Math.floor(num) + " i w górę " + Math.ceil(num));
+        /// Zadanie 12
+        final double ACCEPTED_ERROR = 0.00001; // dowolna wartość
+        System.out.println("Wprowadź pierwszą liczbę");
+        double numOne = scanner.nextDouble();
+        System.out.println("Wprowadź drugą liczbę");
+        double numTwo = scanner.nextDouble();
+        double absoluteDifference = Math.abs(numOne - numTwo);
+        if (absoluteDifference <= ACCEPTED_ERROR) {
+            System.out.println("Takie same");
+        } else {
+            System.out.println("Różne (przekroczono akceptowalną różnicę wartości)");
+        }
     }
 }
