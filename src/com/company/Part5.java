@@ -37,5 +37,25 @@ public class Part5 {
             userNumber = scanner.nextInt();
         }
         System.out.println("Odgadłeś liczbę");
+        /// Zadanie 6
+        System.out.println("Podaj sprężystość k");
+        double k = scanner.nextDouble();
+        System.out.println("Podaj bezwzględność m");
+        double m = scanner.nextDouble();
+        double w = Math.sqrt(k / m);
+        System.out.println("Częstość drgań wynosi: " + w);
+        /// Zadanie 7
+        double T = Math.PI * 2 / w;
+        System.out.println("Okres T wynosi: " + T);
+        /// Zadanie 8
+        System.out.println("Podaj ciężar Q");
+        double Q = scanner.nextDouble();
+        System.out.println("Podaj kąt alpha w stopniach");
+        double alphaInDegrees = scanner.nextDouble();
+        double alphaInRadians = Math.toRadians(alphaInDegrees);
+        System.out.println("Podaj liczbę cięgien n");
+        double n = scanner.nextDouble();
+        double S = Q / (n * Math.cos(alphaInRadians));
+        System.out.println("S wynosi: " + S);
     }
 }
