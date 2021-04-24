@@ -8,7 +8,7 @@ public class Part6 {
         /// Zadanie 1
         Scanner scanner = new Scanner(System.in);
         System.out.println("Podaj wartość w złotówkach");
-        double pln = scanner.nextDouble();
+        double pln = scanner.nextDouble(); /// możemy też skorzystać ze scanner.nextBigDecimal() przypisując wartość bezpośrednio do plnInBigDecimal
         BigDecimal plnInBigDecimal = new BigDecimal(pln);
         final BigDecimal RATE = new BigDecimal("0.22");
         BigDecimal eur = RATE.multiply(plnInBigDecimal);
