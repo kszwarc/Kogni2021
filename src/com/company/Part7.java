@@ -80,12 +80,12 @@ public class Part7 {
         String lineEx6 = reader.nextLine();
         String[] splitResult = lineEx6.split(" ");
         int[] intResult = new int[splitResult.length];
-        int sumEx4 = 0;
+        int sumEx6 = 0;
         for (int i = 0; i < splitResult.length; i++) {
            intResult[i] = Integer.valueOf(splitResult[i]);
-           sumEx4 += intResult[i];
+           sumEx6 += intResult[i];
         }
-        System.out.println("Suma " + sumEx4);
+        System.out.println("Suma " + sumEx6);
 
     }
 }
