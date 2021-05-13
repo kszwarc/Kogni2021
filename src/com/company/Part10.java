@@ -1,7 +1,9 @@
 package com.company;
 
 import java.io.*;
+import java.util.Arrays;
 import java.util.NoSuchElementException;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Part10 {
@@ -15,6 +17,11 @@ public class Part10 {
         //exercise5("D:\\plik.txt");
         //exercise6("D:\\plik.txt");
         //exercise7("D:\\plik.txt", "D:\\plik2.txt");
+        //exercise8("D:\\plik.txt");
+        //exercise9("D:\\plik.txt", 2);
+        //exercise10();
+        //exercise11("D:\\plik.txt");
+        //exercise12("D:\\plik.txt");
     }
 
     private static void exercises1And2() {
@@ -108,6 +115,7 @@ public class Part10 {
         File secondFile = new File(secondPath);
         if (!file.exists() || !secondFile.exists()) {
             System.out.println("Przynajmniej jeden z plików nie istnieje");
+            return;
         }
         try (BufferedReader reader = new BufferedReader(new FileReader(file)); BufferedReader secondReader = new BufferedReader(new FileReader(secondFile))) {
             String firstFileLine, secondFileLine = "";
@@ -116,6 +124,140 @@ public class Part10 {
                     System.out.println("w pierwszym " + firstFileLine + " w drugim " + secondFileLine);
                 }
             }
+        } catch (IOException ex) {
+            System.out.println("Błąd: " + ex.getMessage());
+        }
+    }
+
+    private static void exercise8(String filePath) {
+        System.out.println("Zadanie 8");
+        File file = new File(filePath);
+        if (!file.exists()) {
+            return; /// kończymy zadanie, bo plik nie istnieje
+        }
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch (IOException ex) {
+            System.out.println("Błąd: " + ex.getMessage());
+        }
+    }
+
+    private static void exercise9(String filePath, int offset) {
+        System.out.println("Zadanie 9");
+        File file = new File(filePath);
+        if (!file.exists()) {
+            return; /// kończymy zadanie, bo plik nie istnieje
+        }
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            String line;
+            int lineNumber = 1;
+            StringBuilder result = new StringBuilder();
+            while ((line = reader.readLine()) != null) {
+                if (lineNumber % offset == 0) {
+                    result.append(line);
+                }
+                lineNumber++;
+            }
+            result.reverse();
+            System.out.println(result);
+        } catch (IOException ex) {
+            System.out.println("Błąd: " + ex.getMessage());
+        }
+    }
+
+    private static void exercise10() {
+        System.out.println("Zadanie 10");
+        System.out.println("Wprowadź 1, żeby zapisać i 2, żeby odczytać");
+        int option = Integer.parseInt(reader.nextLine());
+        if (option == 1) {
+            readExercise10();
+        } else if (option == 2) {
+            saveExercise10();
+        } else {
+            System.out.println("Niepoprawna opcja");
+        }
+    }
+
+    private static void readExercise10() {
+        File file = new File("dane.txt");
+        if (!file.exists()) {
+            try {
+                file.createNewFile();
+            } catch (IOException ex) {
+                System.out.println("Nie udało się utworzyć pliku");
+                return; /// kończymy zadanie, bo nie udało się utworzyć pliku
+            }
+        }
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            String line = reader.readLine();
+            System.out.println(line == null ? "Plik jest pusty" : line);
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch (IOException ex) {
+            System.out.println("Błąd: " + ex.getMessage());
+        }
+    }
+
+    private static void saveExercise10() {
+        File file = new File("dane.txt");
+        if (!file.exists()) {
+            try {
+                file.createNewFile();
+            } catch (IOException ex) {
+                System.out.println("Nie udało się utworzyć pliku");
+                return; /// kończymy zadanie, bo nie udało się utworzyć pliku
+            }
+        }
+        System.out.println("Podaj imię");
+        String firstName = reader.nextLine();
+        System.out.println("Podaj nazwisko");
+        String lastName = reader.nextLine();
+        try (PrintWriter writer = new PrintWriter(new FileOutputStream(file , false))) {
+            writer.println(firstName);
+            writer.println(lastName);
+            writer.flush();
+        } catch (IOException ex) {
+            System.out.println("Błąd: " + ex.getMessage());
+        }
+    }
+
+    private static void exercise11(String filePath) {
+        System.out.println("Zadanie 11");
+        File file = new File(filePath);
+        if (!file.exists()) {
+            return;
+        }
+        try (PrintWriter writer = new PrintWriter(new FileOutputStream(file , false))) {
+            Random generator = new Random();
+            for (int i = 0; i < 100; i++) {
+                writer.println(generator.nextInt(11));
+            }
+            writer.flush();
+        } catch (IOException ex) {
+            System.out.println("Błąd: " + ex.getMessage());
+        }
+    }
+
+    private static void exercise12(String filePath) {
+        System.out.println("Zadanie 12");
+        File file = new File(filePath);
+        if (!file.exists()) {
+            return;
+        }
+        int[] numbers = new int[100];
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            String line;
+            int lineNumber = 0;
+            while ((line = reader.readLine()) != null) {
+                numbers[lineNumber] = Integer.parseInt(line);
+                lineNumber++;
+            }
+            Arrays.sort(numbers);
+            System.out.println(Arrays.toString(numbers));
         } catch (IOException ex) {
             System.out.println("Błąd: " + ex.getMessage());
         }
