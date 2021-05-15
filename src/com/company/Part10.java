@@ -7,27 +7,26 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Part10 {
-
-    private static Scanner reader = new Scanner(System.in);
+    private final static Scanner READER = new Scanner(System.in);
 
     public static void main(String[] args) {
-        //exercises1And2();
-        //exercise3();
-        //exercise4("D:\\plik.txt");
-        //exercise5("D:\\plik.txt");
-        //exercise6("D:\\plik.txt");
-        //exercise7("D:\\plik.txt", "D:\\plik2.txt");
-        //exercise8("D:\\plik.txt");
-        //exercise9("D:\\plik.txt", 2);
-        //exercise10();
-        //exercise11("D:\\plik.txt");
-        //exercise12("D:\\plik.txt");
+        /*exercises1And2();
+        exercise3();
+        exercise4("D:\\plik.txt");
+        exercise5("D:\\plik.txt");
+        exercise6("D:\\plik.txt");
+        exercise7("D:\\plik.txt", "D:\\plik2.txt");
+        exercise8("D:\\plik.txt");
+        exercise9("D:\\plik.txt", 2);
+        exercise10();
+        exercise11("D:\\plik.txt");
+        exercise12("D:\\plik.txt"); */
     }
 
     private static void exercises1And2() {
         System.out.println("Zadanie 1");
         System.out.println("Wpisz wartość typu int");
-        int number = Integer.parseInt(reader.nextLine());
+        int number = Integer.parseInt(READER.nextLine());
         try {
             System.out.println(5 / number); /// gdybyśmy nie dali try i catch, to w momencie wpisania 0 rzucony zostanie wyjątek i program zakończy działanie
         } catch (ArithmeticException ex) { /// jak wpiszemy poza blokami try {} catch {} System.out.println(5 / 0); to dowiemy się jakiego typu wyjątek się pojawił (ArithmeticException)
@@ -171,7 +170,7 @@ public class Part10 {
     private static void exercise10() {
         System.out.println("Zadanie 10");
         System.out.println("Wprowadź 1, żeby zapisać i 2, żeby odczytać");
-        int option = Integer.parseInt(reader.nextLine());
+        int option = Integer.parseInt(READER.nextLine());
         if (option == 1) {
             readExercise10();
         } else if (option == 2) {
@@ -213,9 +212,9 @@ public class Part10 {
             }
         }
         System.out.println("Podaj imię");
-        String firstName = reader.nextLine();
+        String firstName = READER.nextLine();
         System.out.println("Podaj nazwisko");
-        String lastName = reader.nextLine();
+        String lastName = READER.nextLine();
         try (PrintWriter writer = new PrintWriter(new FileOutputStream(file , false))) {
             writer.println(firstName);
             writer.println(lastName);
