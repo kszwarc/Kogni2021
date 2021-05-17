@@ -13,9 +13,9 @@ public class Part8 {
         byte system = Byte.valueOf(reader.nextLine());
         converter(system);
         /// Zadanie 2
-        boolean result = isLowerThan100AndInteger();
+        boolean result = isLowerThan100Int();
         System.out.println(result);
-        System.out.println(isLowerThan100AndInteger());
+        System.out.println(isLowerThan100Int());
         /// Zadanie 3
         returnDouble();
         /// Zadanie 4
@@ -38,11 +38,11 @@ public class Part8 {
         /// Zadanie 6
         int[] arrayByReference = new int[dimension];
         System.out.println(Arrays.toString(arrayByReference));
-        generateArrayByReference(arrayByReference);
+        fillInArrayByReference(arrayByReference);
         System.out.println(Arrays.toString(arrayByReference));
     }
 
-    public static void generateArrayByReference(int[] array) {
+    public static void fillInArrayByReference(int[] array) {
         Random generator = new Random();
         for (int i = 0; i < array.length; i++) {
             array[i] = generator.nextInt(15);
@@ -78,7 +78,7 @@ public class Part8 {
         return reader.nextDouble();
     }
 
-    public static boolean isLowerThan100AndInteger() {
+    public static boolean isLowerThan100Int() {
         System.out.println("Wprowadź liczbę typu int mniejszą od 100");
         Scanner reader = new Scanner(System.in);
         if (reader.hasNextInt()) {
