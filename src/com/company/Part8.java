@@ -83,9 +83,7 @@ public class Part8 {
         Scanner reader = new Scanner(System.in);
         if (reader.hasNextInt()) {
             int number = reader.nextInt();
-            if (number < 100) {
-                return true;
-            }
+            return number < 100;
         }
         return false;
     }
