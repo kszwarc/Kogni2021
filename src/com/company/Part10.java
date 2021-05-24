@@ -10,7 +10,7 @@ public class Part10 {
     private final static Scanner READER = new Scanner(System.in);
 
     public static void main(String[] args) {
-        /*exercises1And2();
+        exercises1And2();
         exercise3();
         exercise4("D:\\plik.txt");
         exercise5("D:\\plik.txt");
@@ -20,7 +20,7 @@ public class Part10 {
         exercise9("D:\\plik.txt", 2);
         exercise10();
         exercise11("D:\\plik.txt");
-        exercise12("D:\\plik.txt"); */
+        exercise12("D:\\plik.txt");
     }
 
     private static void exercises1And2() {
