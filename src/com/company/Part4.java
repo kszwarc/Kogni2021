@@ -47,8 +47,10 @@ public class Part4 {
         System.out.println("Wpisz liczbę, dla której mamy obliczyć silnię");
         int number = scanner.nextInt();
         int factorial = 1;
-        for (int i = number; i > 1; i--) {
-            factorial *= i;
+        if (number > 1) { /// zabezpieczenie przed ujemnymi liczbami
+            for (int i = number; i > 1; i--) {
+                factorial *= i;
+            }
         }
         System.out.println(factorial);
         /// Zadanie 4
