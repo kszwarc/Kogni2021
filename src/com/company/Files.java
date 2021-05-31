@@ -13,6 +13,7 @@ public class Files {
         try (PrintWriter printWriter = new PrintWriter(filePath)) {
             printWriter.println("linijka do zapisu"); /// tu wpisujemy co mamy zapisać do pliku (między klamerkami try)
             printWriter.println("Druga linijka do zapisu");
+            printWriter.flush();
         } catch (IOException ex) {
             System.out.println("Błąd " + ex.getMessage());
         }
